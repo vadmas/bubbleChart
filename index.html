@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+   <title>My project</title>
+   <script src="https://d3js.org/d3.v4.min.js"></script>
+   <link href="style.css" rel="stylesheet">
+ </head>
+ <body>
+   <div id="container" style="height: 400px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+   <script type="text/javascript" src="script.js"></script>
+   <script>
+      var mouseClickCallback = function(d){
+         console.log("mouseClickCallback Fired");
+         // Get node data with d.data
+         console.log(d.data);
+      } 
+      var data = {
+           name: "root",
+           children: [
+             {z: 13.8, name: 'BE',country: 'Belgium'},
+             {z: 4.7, name: 'DE',country: 'Germany'},
+             {z: 15.8, name: 'FI',country: 'Finland'},
+             // {z: 12, name: 'NL',country: 'Netherlands'},
+             // {z: 11.8, name: 'SE',country: 'Sweden'},
+             // {z: 16.6, name: 'ES',country: 'Spain'},
+             // {z: 14.5, name: 'FR',country: 'France'},
+             // {z: 10, name: 'NO',country: 'Norway'},
+             // {z: 204.7, name: 'UK',country: 'UnitedKingdom'},
+             // {z: 10.4, name: 'IT',country: 'Italy'},
+             // {z: 16, name: 'RU',country: 'Russia'},
+             {z: 35.3, name: 'US',country: 'UnitedStates'},
+             {z: 28.5, name: 'HU',country: 'Hungary'},
+             {z: 15.4, name: 'PT',country: 'Portugal'},
+             {z: 31.3, name: 'NZ',country: 'NewZealand'
+             }
+         ]
+      }
+      renderBubbles("#container", data, mouseClickCallback)
+   </script>
+ </body>
+</html>

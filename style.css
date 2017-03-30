@@ -1,0 +1,12 @@
+.highcharts-tooltip h3 {
+    margin: 0.3em 0;
+}
+
+.inactive h3 {
+    margin: 0.3em 0;
+}
+
+.bubble_text {
+     fill: blue;
+     font-family: Helvetica;
+}
