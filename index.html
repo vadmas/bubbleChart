@@ -11,9 +11,12 @@
    <script type="text/javascript" src="script.js"></script>
    <script>
       var mouseClickCallback = function(d){
-         // console.log("mouseClickCallback Fired");
-         // Get node data with d.data
-         // console.log(d.data);
+         var all_active = d3.selectAll('.node')
+                            .filter(function(d){return d.is_active})
+                            .data()
+                            .map(function(d){return d.data})
+         console.log("selected data", d.data);
+         console.log(all_active);
       } 
       var data = {
            name: "root",
